@@ -10,10 +10,11 @@ public class Cenario {
     public static Scanner ler = new Scanner(System.in);
     public static Random rand = new Random();
 
-    public static int[] GUERREIRO = {50,15};
+    public static int[] GUERREIRO = {150,15};
     //indice 0 é a vida.
     //indice 1 é o ataque.
 
+    //public static int experiencia;
 
     public static int[] ALVO_TESTE = {15, 6};
     //PARA FINS DE TESTE COM ATAQUE :)
@@ -22,6 +23,13 @@ public class Cenario {
         GUERREIRO[0] = x;
         GUERREIRO[1] = y;
     }
+
+    /*public static void subirNivel (){
+        if(experiencia == experiencia*2){
+            System.out.println("Você fica mais forte");
+        }
+    }*/
+
 
     public static boolean iniciativa(){
         int iniciativa_Jogador = rand.nextInt(20)+1;
@@ -80,10 +88,6 @@ public class Cenario {
         }
     }
 
-
-
-
-
     private static void introducao_Da_Historia() {
         File file = new File("C:\\Users\\rocha\\IdeaProjects\\Rpg\\src\\Introducao.txt");
         try (FileReader fr = new FileReader(file)) {
@@ -99,6 +103,10 @@ public class Cenario {
             e.printStackTrace();
         }
     }
+
+
+
+
 
     //Terminar os metodos do cenario 1,2,3 e 4 para terminar esse metódo.
     public static void escolher_Cenario(int count) {
